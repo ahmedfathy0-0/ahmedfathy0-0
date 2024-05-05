@@ -60,9 +60,9 @@
 
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ahmedfathy0-0&hide_title=false&hide_rank=false&show_icons=true&count_private=true&disable_animations=false&theme=radical&locale=en&hide_border=false" height="140" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ahmedfathy0-0&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=radical&hide_border=false" height="140" alt="languages graph"  />
-</div>
+  <img src="https://github-readme-stats.vercel.app/api?username=ahmedfathy0-0&show_icons=true&count_private=tru&theme=radical&locale=en" height="140" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ahmedfathy0-0&locale=en&layout=compact&card_width=320&langs_count=5&theme=radical" height="140" alt="languages graph"  />
+   
 </p>
 
 ---
