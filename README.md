@@ -67,3 +67,11 @@
 </p>
 
 ---
+
+<div align="center">
+  <a href="https://github.com/ahmedfathy0-0/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=ahmedfathy0-0&theme=onedark" alt="trophy" />
+  </a>
+</div>
+
+---
