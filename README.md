@@ -51,6 +51,9 @@
 <img src="./GIFS/postgresql.svg" width="100"> 
 <img src="./GIFS/Doccker.gif" width="100"> 
 <img width="400" src="https://www.jenkins.io/images/jenkins-logo-title-dark.svg" alt="Jenkins logo"> 
+<img width="300" src="https://github.com/user-attachments/assets/844ca364-4d71-42b3-aaec-4a6c3509ee2e" alt="Motoko logo"> 
+
+
 
 
 </div>
