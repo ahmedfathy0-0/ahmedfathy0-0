@@ -1,5 +1,10 @@
 
-<h2>👋 Hi there! Welcome to Ahmed's Profile! 🚀</h2>
+![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=ahmedfathy0-0)
+
+<h1 align="center">
+   <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Ahmed+Fathy!;&color=ff0000" />
+
+</h1>
 <img align='right' src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif" width="400">
 <p><em>Software Engineer Student at <a href="http://eng.cu.edu.eg/en/page/36/?s=8+">Cairo University faculty of engineering </a><img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 </em></p>
