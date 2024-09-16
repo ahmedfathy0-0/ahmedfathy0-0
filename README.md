@@ -19,6 +19,8 @@
 - 📬 Connect with me on [LinkedIn](www.linkedin.com/in/ahmed-fathy-742352253).
 - 🧗 I strive to constantly innovate and improve, pushing the boundaries of what's possible in software engineering.
 - ⚡ Fun fact: I'm passionate about exploring new technologies and love a good coding challenge! :nerd_face:
+- 🌐 Check out my personal portfolio at [Ahmed's Portfolio](https://ahmed-portfolio-swart-kappa.vercel.app/)
+
 
 
 <br>
