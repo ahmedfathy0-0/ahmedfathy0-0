@@ -80,6 +80,8 @@
 
 ---
 
+![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=ahmedfathy0-0&theme=react-dark&hide_border=true&area=true&custom_title=My+Contribution+Graph)
+
 <div align="center">
   <a href="https://github.com/ahmedfathy0-0/github-profile-trophy">
     <img src="https://github-profile-trophy.vercel.app/?username=ahmedfathy0-0&theme=onedark" alt="trophy" />
