@@ -21,7 +21,7 @@
 - 👯 Seeking collaboration on interesting software engineering projects.
 - 🥅 2024 Goal: Contribute to impactful open-source projects & deepen cloud expertise.
 - 💬 Ask me about software architecture, design patterns, and coding best practices.
-- 📫 Connect with me on [LinkedIn](www.linkedin.com/in/ahmedfathy-x1).
+- 📫 Connect with me on [LinkedIn](https://linkedin.com/in/ahmedfathy-x1).
 - ⚡ Fun Fact: I love exploring new technologies and tackling coding challenges!
 - 🌐 Check out my [personal portfolio](https://ahmed-portfolio-swart-kappa.vercel.app/)
 
