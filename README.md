@@ -1,7 +1,7 @@
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=ahmedfathy0-0)
 
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Ahmed+Fathy!;&color=ff0000" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hello+There!+👋;+I'm+Ahmed+Fathy!;&color=ff0000" />
 </h1>
 
 <p align="center">
