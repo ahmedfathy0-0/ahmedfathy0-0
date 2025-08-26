@@ -16,44 +16,76 @@
 
 ### 👨‍💻 About Me
 
-- 🔭 Currently improving my skills in software development.
-- 🌱 Learning advanced algorithms and data structures.
-- 👯 Seeking collaboration on interesting software engineering projects.
-- 🥅 2024 Goal: Contribute to impactful open-source projects & deepen cloud expertise.
+- 🔭 Currently enhancing my expertise in full-stack development and cloud technologies.  
+- 🌱 Exploring advanced system design, distributed systems, and DevOps practices.  
+- 👯 Open to collaborating on innovative open-source and impactful software projects.  
+- 🥅 2025 Goal: Build scalable real-world applications, strengthen open-source contributions, and grow as a software engineer.  
 - 💬 Ask me about software architecture, design patterns, and coding best practices.
 - 📫 Connect with me on [LinkedIn](https://linkedin.com/in/ahmedfathy-x1).
 - ⚡ Fun Fact: I love exploring new technologies and tackling coding challenges!
 - 🌐 Check out my [personal portfolio](https://ahmed-portfolio-swart-kappa.vercel.app/)
 
 ---
-
 ### 🛠️ Languages and Tools
 
+#### Languages
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="100" />
-  <img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="100" />
-  <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="100" />
-  <img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="100" />
-  <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="100" />
-  <img src="https://user-images.githubusercontent.com/74038190/212281756-450d3ffa-9335-4b98-a965-db8a18fee927.gif" width="100" />
-  <img src="https://user-images.githubusercontent.com/74038190/212280805-9bcb336b-8c55-46a8-abf8-ff286ab55472.gif" width="100" />
-  <img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/1a797f46-efe4-41e6-9e75-5303e1bbcbfa" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/29fd6286-4e7b-4d6c-818f-c4765d5e39a9" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/67f477ed-6624-42da-99f0-1a7b1a16eecb" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/3c16d4f2-b757-4c70-8f42-43d5dddd2c36" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/3fb2cdf6-8920-462e-87a4-95af376418aa" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/de038172-e903-4951-926c-755878deb0b4" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/398b19b1-9aae-4c1f-8bc0-d172a2c08d68" width="100" />
-  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/e0d299f2-767c-4c21-bd49-90f2a19f1a78" width="100" />
-  <img src="./GIFS/postgresql.svg" width="100" />
-  <img src="./GIFS/Doccker.gif" width="100" />
-  <img src="https://www.jenkins.io/images/jenkins-logo-title-dark.svg" width="300" />
-  <img src="https://github.com/user-attachments/assets/844ca364-4d71-42b3-aaec-4a6c3509ee2e" width="300" />
+  <img src="https://skillicons.dev/icons?i=javascript" width="50" title="JavaScript"/>
+  <img src="https://skillicons.dev/icons?i=ts" width="50" title="TypeScript"/>
+  <img src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000" width="50" title="C++"/>
+  <img src="https://skillicons.dev/icons?i=python" width="50" title="Python"/>
+  <img src="https://skillicons.dev/icons?i=cs" width="50" title="C#"/>
+  <img src="./Motoko.png" width="50" title="Motoko"/>
+  <img src="./Verilog.png" width="50" title="Verilog"/>
+  <img src="https://skillicons.dev/icons?i=php" width="50" title="PHP"/>
+  <img src="https://skillicons.dev/icons?i=c" width="50" title="C"/>
+  <img src="https://img.icons8.com/?size=100&id=puL87ypQPxxr&format=png&color=000000" width="50" title="EJS"/>
+</p>
+
+#### Frameworks & Libraries
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react" width="50" title="React.js"/>
+  <img src="https://skillicons.dev/icons?i=nextjs" width="50" title="Next.js"/>
+  <img src="https://skillicons.dev/icons?i=tailwind" width="50" title="Tailwind CSS"/>
+  <img src="https://skillicons.dev/icons?i=redux" width="50" title="Redux"/>
+  <img src="./ReactQuery.svg" width="50" title="React Query"/>
+  <img src="https://skillicons.dev/icons?i=threejs" width="50" title="Three.js"/>
+  <img src="https://skillicons.dev/icons?i=laravel" width="50" title="Laravel"/>
+  <img src="https://skillicons.dev/icons?i=jquery" width="50" title="jQuery"/>
+  <img src="https://skillicons.dev/icons?i=bootstrap" width="50" title="Bootstrap"/>
+  <img src="https://skillicons.dev/icons?i=nodejs" width="50" title="Node.js"/>
+  <img src="https://skillicons.dev/icons?i=express" width="50" title="Express.js"/>
+</p>
+
+#### Databases
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=postgresql" width="50" title="PostgreSQL"/>
+  <img src="https://skillicons.dev/icons?i=mongodb" width="50" title="MongoDB"/>
+  <img src="https://skillicons.dev/icons?i=mysql" width="50" title="MySQL"/>
+  <img src="https://skillicons.dev/icons?i=prisma" width="50" title="Prisma"/>
+</p>
+
+#### Tools
+<p align="center">
+  <img src="https://img.icons8.com/?size=100&id=13631&format=png&color=000000" width="50" title="Adobe Illustrator"/>
+  <img src="https://skillicons.dev/icons?i=git" width="50" title="Git"/>
+  <img src="https://skillicons.dev/icons?i=vscode" width="50" title="VS Code"/>
+  <img src="https://skillicons.dev/icons?i=docker" width="50" title="Docker"/>
+  <img src="https://skillicons.dev/icons?i=jenkins" width="50" title="Jenkins"/>
+  <img src="https://skillicons.dev/icons?i=postman" width="50" title="Postman"/>
+  <img src="https://skillicons.dev/icons?i=arduino" width="50" title="Arduino"/>
+</p>
+
+#### Other Technologies
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=css" width="50" title="CSS"/>
+  <img src="https://skillicons.dev/icons?i=html" width="50" title="HTML"/>
+  <img src="https://skillicons.dev/icons?i=ubuntu" width="50" title="Ubuntu"/>
+  <img src="./JetBrains.png" width="50" title="JetBrains"/>
+  <img src="https://skillicons.dev/icons?i=linux" width="50" title="Linux"/>
 </p>
 
 ---
-
 ### 📊 GitHub Stats
 
 <p align="center">
