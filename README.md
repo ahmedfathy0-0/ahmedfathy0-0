@@ -23,7 +23,7 @@
 - 💬 Ask me about software architecture, design patterns, and coding best practices.
 - 📫 Connect with me on [LinkedIn](https://linkedin.com/in/ahmedfathy-x1).
 - ⚡ Fun Fact: I love exploring new technologies and tackling coding challenges!
-- 🌐 Check out my [personal portfolio](https://ahmed-portfolio-swart-kappa.vercel.app/)
+- 🌐 Check out my [personal portfolio](https://www.mrfathi.tech/)
 
 ---
 ### 🛠️ Languages and Tools
