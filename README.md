@@ -86,30 +86,41 @@
 </p>
 
 ---
+
 ### 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ahmedfathy0-0&show_icons=true&count_private=true&theme=dracula&locale=en" height="150" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ahmedfathy0-0&theme=dracula" height="150" />
-</p>
+<div align="center" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 10px;">
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedfathy0-0&theme=dracula&layout=compact&hide_border=true&hide=html,c" width="400" />
-</p>
+  <!-- Profile Details -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ahmedfathy0-0&theme=dracula" />
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ahmedfathy0-0&theme=dracula" />
+  </picture>
 
+  <!-- Repos per Language -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ahmedfathy0-0&theme=dracula" />
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ahmedfathy0-0&theme=dracula" />
+  </picture>
+
+  <!-- Most Commit Language -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ahmedfathy0-0&theme=dracula" />
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ahmedfathy0-0&theme=dracula" />
+  </picture>
+
+  <!-- Stats -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=ahmedfathy0-0&theme=dracula" />
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=ahmedfathy0-0&theme=dracula" />
+  </picture>
+
+  <!-- Productive Time -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ahmedfathy0-0&theme=dracula&utcOffset=3" />
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ahmedfathy0-0&theme=dracula&utcOffset=3" />
+  </picture>
+
+</div>
 
 ---
-
-### 📈 Contribution Graph
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ahmedfathy0-0&theme=dracula&hide_border=true&area=true&custom_title=My+Contribution+Graph" />
-</p>
-
----
-
-### 🏆 GitHub Profile Trophy
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ahmedfathy0-0&theme=dracula&no-frame=true" />
-</p>
