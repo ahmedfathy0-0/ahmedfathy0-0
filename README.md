@@ -34,12 +34,12 @@
   <img src="https://skillicons.dev/icons?i=ts" width="50" title="TypeScript"/>
   <img src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000" width="50" title="C++"/>
   <img src="https://skillicons.dev/icons?i=python" width="50" title="Python"/>
-  <img src="https://skillicons.dev/icons?i=cs" width="50" title="C#"/>
-  <img src="./Motoko.png" width="50" title="Motoko"/>
-  <img src="./Verilog.png" width="50" title="Verilog"/>
   <img src="https://skillicons.dev/icons?i=php" width="50" title="PHP"/>
+<!--   <img src="https://skillicons.dev/icons?i=cs" width="50" title="C#"/> -->
+  <img src="./Verilog.png" width="50" title="Verilog"/>
   <img src="https://skillicons.dev/icons?i=c" width="50" title="C"/>
   <img src="https://img.icons8.com/?size=100&id=puL87ypQPxxr&format=png&color=000000" width="50" title="EJS"/>
+  <img src="./Motoko.png" width="50" title="Motoko"/>
 </p>
 
 #### Frameworks & Libraries
@@ -63,26 +63,6 @@
   <img src="https://skillicons.dev/icons?i=mongodb" width="50" title="MongoDB"/>
   <img src="https://skillicons.dev/icons?i=mysql" width="50" title="MySQL"/>
   <img src="https://skillicons.dev/icons?i=prisma" width="50" title="Prisma"/>
-</p>
-
-#### Tools
-<p align="center">
-  <img src="https://img.icons8.com/?size=100&id=13631&format=png&color=000000" width="50" title="Adobe Illustrator"/>
-  <img src="https://skillicons.dev/icons?i=git" width="50" title="Git"/>
-  <img src="https://skillicons.dev/icons?i=vscode" width="50" title="VS Code"/>
-  <img src="https://skillicons.dev/icons?i=docker" width="50" title="Docker"/>
-  <img src="https://skillicons.dev/icons?i=jenkins" width="50" title="Jenkins"/>
-  <img src="https://skillicons.dev/icons?i=postman" width="50" title="Postman"/>
-  <img src="https://skillicons.dev/icons?i=arduino" width="50" title="Arduino"/>
-</p>
-
-#### Other Technologies
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=css" width="50" title="CSS"/>
-  <img src="https://skillicons.dev/icons?i=html" width="50" title="HTML"/>
-  <img src="https://skillicons.dev/icons?i=ubuntu" width="50" title="Ubuntu"/>
-  <img src="./JetBrains.png" width="50" title="JetBrains"/>
-  <img src="https://skillicons.dev/icons?i=linux" width="50" title="Linux"/>
 </p>
 
 ---
