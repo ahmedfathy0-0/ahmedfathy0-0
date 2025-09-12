@@ -69,38 +69,15 @@
 
 ### 📊 GitHub Stats
 
-<div align="center" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 10px;">
+<p align="center">
+  <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards">
+    <img src="./profile-summary-card-output/dracula/0-profile-details.svg" />
+    <img src="./profile-summary-card-output/dracula/1-repos-per-language.svg" />
+    <img src="./profile-summary-card-output/dracula/2-most-commit-language.svg" />
+    <img src="./profile-summary-card-output/dracula/3-stats.svg" />
+    <img src="./profile-summary-card-output/dracula/4-productive-time.svg" />
+  </a>
+</p>
 
-  <!-- Profile Details -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ahmedfathy0-0&theme=dracula" />
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ahmedfathy0-0&theme=dracula" />
-  </picture>
-
-  <!-- Repos per Language -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ahmedfathy0-0&theme=dracula" />
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ahmedfathy0-0&theme=dracula" />
-  </picture>
-
-  <!-- Most Commit Language -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ahmedfathy0-0&theme=dracula" />
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ahmedfathy0-0&theme=dracula" />
-  </picture>
-
-  <!-- Stats -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=ahmedfathy0-0&theme=dracula" />
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=ahmedfathy0-0&theme=dracula" />
-  </picture>
-
-  <!-- Productive Time -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ahmedfathy0-0&theme=dracula&utcOffset=3" />
-    <img src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ahmedfathy0-0&theme=dracula&utcOffset=3" />
-  </picture>
-
-</div>
 
 ---
