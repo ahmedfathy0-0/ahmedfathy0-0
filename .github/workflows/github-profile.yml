@@ -1,0 +1,46 @@
+name: GitHub Profile
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  # Job 1: Generate Profile Summary Cards
+  profile-summary-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        with:
+          USERNAME: ahmedfathy0-0
+
+  # Job 2: Generate Snake Animation
+  snake-animation:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: snake.svg?palette=github-dark
+
+      - name: Commit and push snake.svg
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add snake.svg
+          git diff --quiet --cached || git commit -m "Update snake.svg"
+          git push

@@ -16,19 +16,21 @@
 
 ### 👨‍💻 About Me
 
-- 🔭 Currently enhancing my expertise in full-stack development and cloud technologies.  
-- 🌱 Exploring advanced system design, distributed systems, and DevOps practices.  
-- 👯 Open to collaborating on innovative open-source and impactful software projects.  
-- 🥅 2025 Goal: Build scalable real-world applications, strengthen open-source contributions, and grow as a software engineer.  
+- 🔭 Currently enhancing my expertise in full-stack development and cloud technologies.
+- 🌱 Exploring advanced system design, distributed systems, and DevOps practices.
+- 👯 Open to collaborating on innovative open-source and impactful software projects.
+- 🥅 2025 Goal: Build scalable real-world applications, strengthen open-source contributions, and grow as a software engineer.
 - 💬 Ask me about software architecture, design patterns, and coding best practices.
 - 📫 Connect with me on [LinkedIn](https://linkedin.com/in/ahmedfathy-x1).
 - ⚡ Fun Fact: I love exploring new technologies and tackling coding challenges!
 - 🌐 Check out my [personal portfolio](https://www.mrfathi.tech/)
 
 ---
+
 ### 🛠️ Languages and Tools
 
 #### Languages
+
 <p align="center">
   <img src="https://skillicons.dev/icons?i=javascript" width="50" title="JavaScript"/>
   <img src="https://skillicons.dev/icons?i=ts" width="50" title="TypeScript"/>
@@ -43,6 +45,7 @@
 </p>
 
 #### Frameworks & Libraries
+
 <p align="center">
   <img src="https://skillicons.dev/icons?i=react" width="50" title="React.js"/>
   <img src="https://skillicons.dev/icons?i=nextjs" width="50" title="Next.js"/>
@@ -58,6 +61,7 @@
 </p>
 
 #### Databases
+
 <p align="center">
   <img src="https://skillicons.dev/icons?i=postgresql" width="50" title="PostgreSQL"/>
   <img src="https://skillicons.dev/icons?i=mongodb" width="50" title="MongoDB"/>
@@ -79,5 +83,8 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="./snake.svg" alt="Snake animation" />
+</p>
 
 ---
