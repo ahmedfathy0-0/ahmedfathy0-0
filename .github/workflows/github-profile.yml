@@ -11,6 +11,8 @@ on:
 jobs:
   # Job 1: Generate Profile Summary Cards
   profile-summary-cards:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,6 +24,7 @@ jobs:
 
   # Job 2: Generate Snake Animation
   snake-animation:
+    needs: profile-summary-cards
     permissions:
       contents: write
     runs-on: ubuntu-latest
