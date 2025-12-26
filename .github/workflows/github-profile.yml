@@ -46,4 +46,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add snake.svg
           git diff --quiet --cached || git commit -m "Update snake.svg"
+          git pull origin main --rebase
           git push
