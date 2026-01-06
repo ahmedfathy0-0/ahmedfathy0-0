@@ -7,4 +7,5 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-out/
+out/*
+!out/*.pdf
