@@ -1,0 +1,118 @@
+%-------------------------------------------
+% Resume: SOFTWARE ENGINEERING FOCUSED
+%-------------------------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+% Import modular content
+\input{projects.tex}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Ahmed Fathy} & Email: \href{mailto:ahmedfathi20044002@gmail.com}{ahmedfathi20044002@gmail.com}\\
+  \textit{Software Engineer} & Mobile: +20 155 285 1443 \\
+  \href{https://www.linkedin.com/in/ahmedfathy-x1}{LinkedIn} $|$ \href{https://github.com/ahmedfathy0-0}{Github} $|$ \href{https://www.mrfathi.tech/}{Portfolio} & Giza, Egypt \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Cairo University, Faculty of Engineering}{Giza, Egypt}
+      {B.Sc. in Computer Engineering;  GPA: 3.6}{2023 -- 2027}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Al Nada Scientific Office}{Cairo, Egypt}
+      {Software Developer}{June 2022 -- 2024}
+      \resumeItemListStart
+        \resumeItem{System Migration}
+          {Architected the migration of a legacy business application to a modern stack, optimizing data structures and access patterns.}
+        \resumeItem{Efficiency}
+          {Engineered efficient CRUD operations for high-volume inventory and sales data.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS (SOFTWARE & ALGORITHMS)-----------------
+\section{Software Engineering Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHankers
+    \resumeProjectPathPlanning
+    \resumeProjectAlienInvasion
+    \resumeProjectProcessor % Including Assembler aspect
+    \resumeProjectTactic
+
+  \resumeSubHeadingListEnd
+
+%-----------STUDENT ACTIVITIES-----------------
+\section{Student Activities}
+  \resumeSubHeadingListStart
+    \resumeStudentActivities
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+    \item{\textbf{Languages}{: C++, Python, JavaScript/TypeScript, SQL, PHP}}
+    \item{\textbf{Core Concepts}{: Data Structures, Algorithms, OOP, Design Patterns, Operating Systems}}
+    \item{\textbf{Systems}{: Unix/Linux, Computer Architecture, Multithreading, Memory Management}}
+    \item{\textbf{Backend \& APIs}{: Node.js, Express, REST, Docker, Microservices}}
+    \item{\textbf{Tools}{: Git, Make, CMake, GDB, Valgrind}}
+ \resumeSubHeadingListEnd
+
+\end{document}

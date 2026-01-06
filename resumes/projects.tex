@@ -1,0 +1,219 @@
+%-------------------------------------------
+% Projects & Activities Database
+% Use \newcommand to define reusable blocks
+%-------------------------------------------
+
+% --- STUDENT ACTIVITIES ---
+\newcommand{\resumeStudentActivities}{
+    \resumeSubheading
+      {IEEE}{Cairo, Egypt}
+      {UI/UX Designer - Frontend Team Leader}{Oct 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{UI Design}
+          {Designed intuitive and visually appealing user interfaces for internal platforms and event management tools.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Technical Center for Career Development (TCCD)}{Cairo, Egypt}
+      {Frontend Developer}{June 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{HR System}
+          {Developed an HR system to help HR members monitor events, track attendees, and manage participation.}
+        \resumeItem{Web Maintenance}
+          {Contributed to the development and maintenance of the official TCCD website.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Physics Helping District (PhD)}{Cairo, Egypt}
+      {Team Leader}{June 2022 - 2024}
+      \resumeItemListStart
+        \resumeItem{Mentorship}
+          {Led a student initiative supporting peers in physics and electronics through tutoring, workshops, and practical demonstrations to improve academic performance.}
+      \resumeItemListEnd
+}
+
+% --- WEB PROJECTS ---
+
+\newcommand{\resumeProjectHankers}{
+    \resumeSubheading
+      {Hankers (X-Clone)}{Github}
+      {Full-Stack Social Networking Platform}{Software Engineering Project}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Developed a large-scale, modern social networking platform as part of an advanced Software Engineering project.}
+        \resumeItem{Frontend}
+          {React.js, TypeScript, modern state management, responsive UI design, AJAX-based API integration.}
+        \resumeItem{Backend}
+          {Collaborative RESTful APIs, authentication services, containerized services with Docker.}
+        \resumeItem{Architecture}
+          {Worked within a multi-team architecture (Frontend, Backend, DevOps, Testing) following industry-standard SDLC practices, CI/CD pipelines, and collaborative workflows.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectNexaMart}{
+    \resumeSubheading
+      {NexaMart}{Github}
+      {Full-Stack E-commerce Application}{Personal Project}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Developed a modern full-stack e-commerce bookstore application.}
+        \resumeItem{Stack}
+          {Next.js (TypeScript), Redux Toolkit, React Query, Tailwind CSS, Laravel 11, MySQL, Sanctum.}
+        \resumeItem{Features}
+          {Implemented user authentication, shopping cart, order management, review system, inventory management, and an admin dashboard with analytics.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectTayseer}{
+    \resumeSubheading
+      {Tayseer-Web}{Preview / Github}
+      {Corporate Website}{Freelance / Company Project}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Built a corporate website for a company using Next.js and TypeScript.}
+        \resumeItem{Technology}
+          {Leveraged Next.js’s server-side rendering (SSR) and TypeScript’s static typing for performance and reliability. Styled with Tailwind CSS.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectCompanyManager}{
+    \resumeSubheading
+      {Company Manager App}{Github}
+      {ERP System for Al Nada Scientific Office}{}
+      \resumeItemListStart
+        \resumeItem{Tech Stack}
+          {React.js, Redux, Express.js, Prisma, and PostgreSQL.}
+        \resumeItem{Features}
+          {Implemented CRUD operations for customers, suppliers, stock, sales, purchases, debts, and price quotations.}
+        \resumeItem{Architecture}
+          {Built a modular backend with Prisma ORM and RESTful APIs for efficient data handling.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectBlog}{
+    \resumeSubheading
+      {Blog Web Application}{Preview / Github}
+      {Full-Stack Blog Platform}{}
+      \resumeItemListStart
+        \resumeItem{Tech Stack}
+          {Node.js, Express.js, EJS, and PostgreSQL.}
+        \resumeItem{Features}
+          {Implemented CRUD operations, styled content via Quill editor, and image uploads with Multer.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectOrrery}{
+    \resumeSubheading
+      {Interactive Orrery}{Preview / Github}
+      {3D Solar System Visualizer}{}
+      \resumeItemListStart
+        \resumeItem{Tech Stack}
+          {React.js and Three.js.}
+        \resumeItem{Features}
+          {Rendered real-time planetary motion and near-Earth object data with responsive controls.}
+      \resumeItemListEnd
+}
+
+% --- AI & DATA PROJECTS ---
+
+\newcommand{\resumeProjectImageColorization}{
+    \resumeSubheading
+      {Image Colorization \& Restoration}{Github}
+      {Deep Learning Restoration Pipeline}{Python}
+      \resumeItemListStart
+        \resumeItem{Pipeline}
+          {Built an end-to-end pipeline for restoring old/damaged photos: Denoising, Deblurring, and Inpainting.}
+        \resumeItem{Tech Stack}
+          {Python, FastAPI, OpenCV, scikit-image, NumPy, SciPy, React.js frontend.}
+        \resumeItem{Algorithms}
+          {Implemented advanced image enhancement, crack/damage segmentation, Telea (FMM) inpainting, and scribble-based colorization.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectPathPlanning}{
+    \resumeSubheading
+      {Path Planning Algorithm Study}{Github}
+      {Algorithm Performance Analysis}{C++}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Compared A*, Dijkstra’s, and RRT algorithms through C++ implementations and performance analysis.}
+      \resumeItemListEnd
+}
+
+% --- EMBEDDED & HARDWARE PROJECTS ---
+
+\newcommand{\resumeProjectTactic}{
+    \resumeSubheading
+      {Tactic (Robotics \& AI)}{Github}
+      {Browser-Controlled Game Suite with Robotics}{}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Developed a browser-controlled game suite integrating AI, computer vision, and robotics.}
+        \resumeItem{Tech Stack}
+          {FastAPI, YOLOv5, and OpenCV for backend. Next.js frontend. ESP32 hardware via WebSockets.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectProcessor}{
+    \resumeSubheading
+      {Staged Pipelined Processor (RISC)}{Github}
+      {Computer Architecture Course Project}{VHDL}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Designed and implemented a 32-bit RISC processor with a classic 5-stage pipeline (IF, ID, EX, MEM, WB) using VHDL.}
+        \resumeItem{Features}
+          {Implemented hazard detection, forwarding, stalling, 2-bit branch prediction, and interrupt handling.}
+        \resumeItem{Tooling}
+          {Built a Python-based assembler. Verified using ModelSim/QuestaSim.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectCNN}{
+    \resumeSubheading
+      {CNN Convolution Accelerator}{Github}
+      {VLSI Hardware Acceleration Project}{Verilog}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Designed a hardware accelerator for 2D convolution targeting CNN workloads using Verilog HDL.}
+        \resumeItem{Architecture}
+          {Implemented an 8x8 systolic array, DMA-based data loading, dual-port SRAM buffering.}
+        \resumeItem{Performance}
+          {Supported kernel sizes up to 16x16 using split-kernel execution. Fully pipelined dataflow.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectAES}{
+    \resumeSubheading
+      {AES Encryption/Decryption Engine}{Github}
+      {Cryptographic Core Design}{Verilog}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Implemented a complete AES cryptographic core in Verilog HDL supporting 128/192/256-bit modes.}
+        \resumeItem{Datapath}
+          {Full hardware implementation of SubBytes, ShiftRows, MixColumns, AddRoundKey.}
+        \resumeItem{Verification}
+          {Verified correctness against known AES test vectors with debug tracing.}
+      \resumeItemListEnd
+}
+
+% --- SOFTWARE & GAMES PROJECTS ---
+
+\newcommand{\resumeProjectAlienInvasion}{
+    \resumeSubheading
+      {Alien Invasion Game}{C++}
+      {Combat Simulation Game}{}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Designed a simulation game modeling combat scenarios using custom data structures.}
+      \resumeItemListEnd
+}
+
+\newcommand{\resumeProjectPaint}{
+    \resumeSubheading
+      {Paint for Kids Game}{C++}
+      {Interactive Drawing Application}{}
+      \resumeItemListStart
+        \resumeItem{Description}
+          {Built an OOP-based drawing application for children with interactive UI and basic tools.}
+      \resumeItemListEnd
+}

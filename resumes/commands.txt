@@ -1,0 +1,1 @@
+latexmk -pdf -outdir=./out test_projects.tex
