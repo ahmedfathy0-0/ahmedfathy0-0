@@ -4,13 +4,16 @@
   <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hello+There!+👋;+I'm+Ahmed+Fathi!;&color=ff0000" />
 </h1>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif" width="400" />
-</p>
-
-<p align="center"><em>
-  Software Engineering Student at <a href="http://eng.cu.edu.eg/en/page/36/?s=8+">Cairo University, Faculty of Engineering</a> <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30" />
-</em></p>
+<div align="center">
+  <img src="./octocat.png" width="400" />
+  <br>
+  <a href="http://eng.cu.edu.eg/en/page/36/?s=8+">
+    <img src="https://img.shields.io/badge/🎓_Software_Engineering_Student-Cairo_University-CC0000?style=for-the-badge&labelColor=1a1a2e" alt="Cairo University"/>
+  </a>
+  <br>
+  <img src="https://img.shields.io/badge/Faculty_of_Engineering-Egypt_🇪🇬-gold?style=flat-square&labelColor=1a1a2e" alt="Faculty of Engineering"/>
+  <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30" />
+</div>
 
 ---
 
