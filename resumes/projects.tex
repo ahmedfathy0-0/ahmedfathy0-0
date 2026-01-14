@@ -4,69 +4,61 @@
 
 % --- STUDENT ACTIVITIES ---
 \newcommand{\resumeStudentActivities}{
-    \resumeSubheading
-      {IEEE}{Cairo}
-      {UI/UX Designer - Frontend Team Leader}{Oct 2025 -- Present}
+    \resumeActivitySubheading
+      {IEEE}{Cairo}{UI/UX Designer - Frontend Team Leader}{Oct 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Interface Design}
-          {Architected intuitive user interfaces for internal platforms, optimizing user journey and accessibility protocols.}
+        \resumeItem{Leadership}
+          {Architected intuitive user interfaces and optimized user journey protocols for internal platforms.}
       \resumeItemListEnd
+    \vspace{4pt}
 
-    \resumeSubheading
-      {Technical Center for Career Development (TCCD)}{Cairo}
-      {Frontend Developer}{June 2025 -- Present}
+    \resumeActivitySubheading
+      {Technical Center for Career Development (TCCD)}{Cairo}{Frontend Developer}{June 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{HR Management System}
-          {Engineered internal dashboard enabling HR personnel to monitor events, track attendees, and analyze participation metrics.}
-        \resumeItem{Web Maintenance}
-          {Spearheaded development and ongoing optimization of official TCCD web presence.}
+        \resumeItem{Development}
+          {Engineered HR dashboard for event tracking and spearheaded optimization of the official TCCD web.}
       \resumeItemListEnd
+    \vspace{4pt}
 
-    \resumeSubheading
-      {Physics Helping District (PhD)}{Cairo}
-      {Team Leader}{June 2022 -- 2024}
+    \resumeActivitySubheading
+      {Physics Helping District (PhD)}{Cairo}{Team Leader}{June 2022 -- 2024}
       \resumeItemListStart
-        \resumeItem{Mentorship Initiative}
-          {Directed student-led initiative supporting peers in physics and electronics via tutoring and practical workshops, resulting in measurable academic improvement.}
+        \resumeItem{Mentorship}
+          {Led peer tutoring initiative in electronics, achieving measurable academic improvement.}
       \resumeItemListEnd
 }
 
 % --- HARDWARE & EMBEDDED PROJECTS ---
 
 \newcommand{\resumeProjectProcessor}{
-    \resumeSubheading
-      {Staged Pipelined Processor (RISC)}{\href{https://github.com/Exo1i/5-Stage-Pipelined-Processor.git}{Source Code}}
-      {Computer Architecture Implementation}{VHDL}
+    \resumeProjectSubheading
+      {5-Stage Pipelined Processor (RISC)}{https://github.com/Exo1i/5-Stage-Pipelined-Processor.git}{VHDL, QuestaSim, Computer Architecture}{2025}
       \resumeItemListStart
         \resumeItem{Core Architecture}
-          {Engineered \textbf{32-bit} RISC processor utilizing classic \textbf{5-stage} pipeline (IF, ID, EX, MEM, WB) with \textbf{16 general-purpose registers}.}
+          {Engineered a \textbf{32-bit 5-stage pipelined processor} in VHDL, supporting a custom ISA of over 25 instructions.}
         \resumeItem{Hazard Resolution}
-          {Integrated hazard detection units, data forwarding paths, and pipeline stalling mechanisms to resolve data dependencies and control hazards.}
+          {Optimized throughput by implementing Hazard Detection and Data Forwarding units to resolve control and data dependencies.}
         \resumeItem{Verification}
-          {Validated functional correctness via ModelSim waveform simulations; developed custom Python assembler to generate machine code test vectors.}
+          {Validated functional correctness through rigorous simulation and testbench environments in \textbf{QuestaSim}.}
       \resumeItemListEnd
 }
 
 \newcommand{\resumeProjectCNN}{
-    \resumeSubheading
-      {CNN Convolution Accelerator}{\href{https://github.com/AhmedSobhy01/convolution-accelerator.git}{Source Code}}
-      {VLSI Hardware Acceleration}{Verilog}
+    \resumeProjectSubheading
+      {CNN Convolution Accelerator}{https://github.com/AhmedSobhy01/convolution-accelerator.git}{Verilog, OpenLane2, ASIC Design}{2025}
       \resumeItemListStart
         \resumeItem{Architecture}
-          {Architected high-throughput hardware accelerator for \textbf{2D convolution} operations targeting Edge-AI inference workloads.}
-        \resumeItem{Micro-Architecture}
-          {Implemented \textbf{8x8 Systolic Array} topology with DMA-based data loading and dual-port SRAM buffering for efficient memory bandwidth.}
-        \resumeItem{Kernel Support}
-          {Optimized for split-kernel execution supporting \textbf{16x16 kernels} using fully pipelined dataflow strategy.}
-        \resumeItem{Verification}
-          {Completed RTL-to-GDSII flow using OpenLane2; performed Static Timing Analysis (STA), DRC, and LVS verification with GTKWave waveform analysis.}
+          {Designed a synthesizable \textbf{2D convolution accelerator} using \textbf{Systolic Arrays} and fully pipelined dataflow to maximize MAC throughput.}
+        \resumeItem{Memory Hierarchy}
+          {Implemented DMA-based loading and dual-port SRAM buffering to support up to \textbf{16x16 kernel} execution.}
+        \resumeItem{Physical Design}
+          {Executed RTL-to-GDSII synthesis using \textbf{OpenLane2}, validating physical feasibility and achieving timing closure.}
       \resumeItemListEnd
 }
 
 \newcommand{\resumeProjectAES}{
-    \resumeSubheading
-      {AES Encryption/Decryption Engine}{\href{https://github.com/ahmedfathy0-0/AES.git}{Source Code}}
-      {Cryptographic Core Design}{Verilog}
+    \resumeProjectSubheading
+      {AES Encryption/Decryption Engine}{https://github.com/ahmedfathy0-0/AES.git}{Verilog, FPGA, Cryptograph}{2023}
       \resumeItemListStart
         \resumeItem{Core Logic}
           {Synthesized robust AES cryptographic core in Verilog HDL supporting \textbf{128-bit, 192-bit, and 256-bit} key standards.}
@@ -78,9 +70,8 @@
 }
 
 \newcommand{\resumeProjectTactic}{
-    \resumeSubheading
-      {Tactic (Robotics \& AI)}{\href{https://github.com/roboSobia}{Source Code}}
-      {IoT \& Computer Vision Integration}{Embedded Systems}
+    \resumeProjectSubheading
+      {Tactic (Robotics \& AI)}{https://github.com/roboSobia}{Embedded Systems}{2024}
       \resumeItemListStart
         \resumeItem{System Integration}
           {Developed browser-controlled robotics suite integrating AI computer vision with low-latency hardware control.}
@@ -192,16 +183,13 @@
 % --- GAMES & SIMULATIONS ---
 
 \newcommand{\resumeProjectBrickBreakers}{
-    \resumeSubheading
-      {Brick Breakers Arcade}{\href{https://github.com/ahmedfathy0-0/Brick-Breakers-Game-Assembly-8086.git}{Source Code}}
-      {Low-Level Game Development}{Assembly (x86)}
+    \resumeProjectSubheading
+      {x86 Brick Breakers Arcade}{https://github.com/ahmedfathy0-0/Brick-Breakers-Game-Assembly-8086.git}{Assembly (x86), MASM, Low-Level Programming}{2024}
       \resumeItemListStart
-        \resumeItem{Low-Level Logic}
-          {Programmed competitive multiplayer game directly in 8086 Assembly, bypassing high-level abstractions.}
-        \resumeItem{Interrupts}
-          {Manipulated hardware interrupts for real-time keyboard input (A/D keys) and video memory mapping.}
-        \resumeItem{Execution}
-          {Optimized execution flow within MASM/DOSBox environment.}
+        \resumeItem{Game Logic}
+          {Developed a real-time, multiplayer arcade game using x86 Assembly and the MASM assembler.}
+        \resumeItem{System Control}
+          {Directly manipulated video memory for low-latency graphics rendering and managed hardware interrupts to handle real-time I/O.}
       \resumeItemListEnd
 }
 
@@ -243,16 +231,13 @@
 % For Hardware/Embedded Resume
 \newcommand{\resumeExperienceHardware}{
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Al Nada Scientific Office}{Cairo, Egypt}
-      {Technical Support Trainee}{June 2022 -- 2024}
+    \resumeActivitySubheading
+      {Al Nada Scientific Office}{Cairo, Egypt}{Technical Support Trainee}{June 2022 -- 2024}
       \resumeItemListStart
-        \resumeItem{Hardware Diagnostics}
-          {Assisted senior technicians in troubleshooting electronic devices including workstations, printers, and network equipment.}
-        \resumeItem{Technical Skills Development}
-          {Gained hands-on experience with hardware diagnostics, firmware updates, and preventive maintenance procedures.}
-        \resumeItem{Documentation Support}
-          {Contributed to creating troubleshooting documentation and learned systematic approaches to hardware issue resolution.}
+        \resumeItem{Diagnostics \& Maintenance}
+          {Troubleshot workstations and network equipment; performed firmware updates and preventive maintenance.}
+        \resumeItem{Documentation}
+          {Created systematic troubleshooting documentation to streamline hardware issue resolution.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 }
@@ -260,9 +245,8 @@
 % For Software Resume
 \newcommand{\resumeExperienceSoftware}{
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Al Nada Scientific Office}{Cairo, Egypt}
-      {Software Developer (Freelance)}{June 2022 -- 2024}
+    \resumeActivitySubheading
+      {Al Nada Scientific Office}{Cairo, Egypt}{Software Developer (Freelance)}{June 2022 -- 2024}
       \resumeItemListStart
         \resumeItem{Full-Stack Development}
           {Designed and built a custom ERP application using React.js, Express.js, and PostgreSQL to replace legacy spreadsheet-based workflows.}
@@ -277,9 +261,8 @@
 % For Web Resume
 \newcommand{\resumeExperienceWeb}{
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Al Nada Scientific Office}{Cairo, Egypt}
-      {Web Developer (Freelance)}{June 2022 -- 2024}
+    \resumeActivitySubheading
+      {Al Nada Scientific Office}{Cairo, Egypt}{Web Developer (Freelance)}{June 2022 -- 2024}
       \resumeItemListStart
         \resumeItem{Full-Stack Development}
           {Built custom ERP web application using React.js and PostgreSQL to replace legacy spreadsheet-based business processes.}
@@ -294,9 +277,8 @@
 % For AI Resume
 \newcommand{\resumeExperienceAI}{
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Al Nada Scientific Office}{Cairo, Egypt}
-      {Software Developer (Freelance)}{June 2022 -- 2024}
+    \resumeActivitySubheading
+      {Al Nada Scientific Office}{Cairo, Egypt}{Software Developer (Freelance)}{June 2022 -- 2024}
       \resumeItemListStart
         \resumeItem{Database Design}
           {Designed PostgreSQL database schema to structure customer, supplier, and inventory data for ERP application.}
@@ -313,12 +295,9 @@
 % Hardware Skills
 \newcommand{\resumeSkillsHardware}{
  \resumeSubHeadingListStart
-    \item{\textbf{RTL Design \& Synthesis}{: Verilog HDL, VHDL, SystemVerilog, Digital Logic Synthesis, Finite State Machines (FSM), Timing Closure}}
-    \item{\textbf{EDA Tools \& Simulation}{: ModelSim, QuestaSim, Intel Quartus Prime, GTKWave, Waveform Analysis}}
-    \item{\textbf{Embedded Systems Development}{: ESP32 Microcontrollers, AVR/Arduino Platforms}}
-    \item{\textbf{Computer Architecture}{: RISC-V ISA, MIPS Architecture, Pipeline Design}}
-    \item{\textbf{VLSI Design \& Verification}{: RTL-to-GDSII Flow, OpenLane2, DRC/LVS Verification, Static Timing Analysis, Systolic Arrays, Hardware Accelerators}}
-    \item{\textbf{Programming Languages}{: C/C++ Programming (Advanced), Python Scripting, x86 Assembly Language, MIPS Assembly Language}}
+    \item{\textbf{Digital Design \& Verification}{: Verilog HDL, VHDL, RTL Design, RISC-V ISA, MIPS Architecture, Pipeline Design, RTL-to-GDSII Flow, OpenLane2, DRC/LVS Verification, Static Timing Analysis, FSM Design}}
+    \item{\textbf{Development Tools \& Platforms}{: ModelSim, QuestaSim, Intel Quartus Prime, GTKWave, ESP32, AVR/Arduino}}
+    \item{\textbf{Programming Languages}{: C/C++ (Advanced), Python, x86 Assembly, MIPS Assembly}}
  \resumeSubHeadingListEnd
 }
 

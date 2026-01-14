@@ -1,7 +1,7 @@
 %-------------------------------------------
 % Resume: HARDWARE & EMBEDDED SYSTEMS FOCUSED
 %-------------------------------------------
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article} % Changed to 10pt for space
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -19,12 +19,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+% Adjust margins - Tighter for 1 page fit
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -32,13 +32,15 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting - Reduced spacing
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
+
+% Standard two-line subheading for Education, Experience, Activities
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -46,6 +48,23 @@
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
+
+% Single-line subheading for projects with source code
+\newcommand{\resumeProjectSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{\small#3} & \href{#2}{Source Code} $|$ \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% Single-line subheading for activities
+\newcommand{\resumeActivitySubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{\small#3} & \textit{\small#2} $|$ \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \renewcommand{\labelitemii}{$\circ$}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
@@ -59,15 +78,20 @@
 \input{projects.tex}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Ahmed Fathy} & Email: \href{mailto:ahmedfathi20044002@gmail.com}{ahmedfathi20044002@gmail.com}\\
-  \textit{Computer Engineer -- FPGA \& Embedded Systems} & Mobile: +20 155 285 1443 \\
-  \href{https://www.linkedin.com/in/ahmedfathy-x1}{LinkedIn} $|$ \href{https://github.com/ahmedfathy0-0}{GitHub} $|$ \href{https://www.mrfathi.tech/}{Portfolio} & Giza, Egypt \\
-\end{tabular*}
+% Compressed Header to save space
+\begin{center}
+    \textbf{\Huge \scshape Ahmed Fathy} \\ \vspace{1pt}
+    \small Computer Engineer -- FPGA \& Embedded Systems \\
+    \href{mailto:ahmedfathi20044002@gmail.com}{\underline{ahmedfathi20044002@gmail.com}} $|$ 
+    +20 155 285 1443 $|$ 
+    \href{https://www.linkedin.com/in/ahmedfathy-x1}{\underline{LinkedIn}} $|$ 
+    \href{https://github.com/ahmedfathy0-0}{\underline{GitHub}} $|$ 
+    \href{https://www.mrfathi.tech/}{\underline{Portfolio}}
+\end{center}
 
-%-----------PROFESSIONAL SUMMARY-----------------
-\section{Professional Summary}
-Detail-oriented Computer Engineering student with hands-on experience in FPGA development, digital circuit design, and embedded systems programming. Experienced in ASIC design flow from RTL coding to tape-out. Skilled in RTL design using Verilog and VHDL, with demonstrated ability to implement and verify complex hardware architectures including pipelined processors and hardware accelerators. Eager to apply academic knowledge and project experience to a hardware engineering role.
+% %-----------PROFESSIONAL SUMMARY-----------------
+% \section{Professional Summary}
+% \small Detail-oriented Computer Engineering student with hands-on experience in FPGA development, digital circuit design, and embedded systems programming. Experienced in ASIC design flow from RTL coding to tape-out. Skilled in RTL design using Verilog and VHDL, with demonstrated ability to implement and verify complex hardware architectures including pipelined processors and hardware accelerators. 
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -77,14 +101,17 @@ Detail-oriented Computer Engineering student with hands-on experience in FPGA de
 \section{Experience}
   \resumeExperienceHardware
 
-%-----------PROJECTS (HARDWARE & EMBEDDED)-----------------
+%-----------PROJECTS-----------------
 \section{Hardware \& Embedded Projects}
   \resumeSubHeadingListStart
-    % Prioritize the most impressive hardware projects
     \resumeProjectProcessor
+    \vspace{4pt}
     \resumeProjectCNN
+    \vspace{4pt}
     \resumeProjectAES
+    \vspace{4pt}
     \resumeProjectTactic
+    \vspace{4pt}
     \resumeProjectBrickBreakers
   \resumeSubHeadingListEnd
 
