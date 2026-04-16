@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, createContext, useContext } from 'react'
 import PersonalInfo from './components/PersonalInfo'
+import SummarySection from './components/SummarySection'
 import EducationSection from './components/EducationSection'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
@@ -56,6 +57,12 @@ export interface SkillSet {
   categories: SkillCategory[]
 }
 
+export interface Summary {
+  id: string
+  variant: string
+  content: string
+}
+
 export interface PersonalInfoData {
   name: string
   title: string
@@ -78,6 +85,7 @@ export interface Education {
 export interface ResumeData {
   personalInfo: PersonalInfoData
   education: Education
+  summaries: Summary[]
   experiences: Experience[]
   projects: Project[]
   activities: Activity[]
@@ -85,6 +93,7 @@ export interface ResumeData {
 }
 
 export interface Selection {
+  summaryId: string | null
   experienceId: string | null
   projectIds: string[]
   activityIds: string[]
@@ -110,7 +119,7 @@ export function useApp() {
 }
 
 type ModalConfig = {
-  type: 'project' | 'experience' | 'activity' | 'skill'
+  type: 'project' | 'experience' | 'activity' | 'skill' | 'summary'
   mode: 'add' | 'edit'
   data?: any
 } | null
@@ -120,11 +129,12 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('personal')
   const [selection, setSelection] = useState<Selection>({
+    summaryId: null,
     experienceId: null,
     projectIds: [],
     activityIds: [],
     skillsId: null,
-    sectionOrder: ['education', 'experience', 'activities', 'projects', 'skills'],
+    sectionOrder: ['summary', 'education', 'experience', 'projects', 'activities', 'skills'],
     projectsSectionTitle: 'Projects'
   })
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
@@ -157,6 +167,7 @@ function App() {
     if (data && selection.experienceId === null) {
       setSelection(prev => ({
         ...prev,
+        summaryId: data.summaries?.[0]?.id || null,
         experienceId: data.experiences[0]?.id || null,
         projectIds: data.projects.slice(0, 5).map(p => p.id),
         activityIds: data.activities.map(a => a.id),
@@ -199,12 +210,23 @@ function App() {
 
   const tabs = [
     { id: 'personal', label: 'Personal Info', icon: '👤' },
+    { id: 'summary', label: 'Summary', icon: '📝' },
     { id: 'education', label: 'Education', icon: '🎓' },
     { id: 'experience', label: 'Experience', icon: '💼' },
-    { id: 'activities', label: 'Activities', icon: '🏆' },
     { id: 'projects', label: 'Projects', icon: '🚀' },
+    { id: 'activities', label: 'Activities', icon: '🏆' },
     { id: 'skills', label: 'Skills', icon: '⚡' },
   ]
+
+  const moveSection = (idx: number, direction: 'up' | 'down') => {
+    const newOrder = [...selection.sectionOrder]
+    if (direction === 'up' && idx > 0) {
+        [newOrder[idx - 1], newOrder[idx]] = [newOrder[idx], newOrder[idx - 1]]
+    } else if (direction === 'down' && idx < newOrder.length - 1) {
+        [newOrder[idx + 1], newOrder[idx]] = [newOrder[idx], newOrder[idx + 1]]
+    }
+    setSelection({ ...selection, sectionOrder: newOrder })
+  }
 
   if (loading) {
     return (
@@ -237,6 +259,21 @@ function App() {
             ))}
           </nav>
 
+          <div style={{ padding: '0 16px', marginTop: 16 }}>
+            <h3 style={{ fontSize: 11, textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 8, letterSpacing: '0.5px' }}>Section Order</h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              {selection.sectionOrder.map((section, idx) => (
+                <div key={section} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 8px', background: 'var(--bg-glass)', borderRadius: 'var(--radius-sm)', fontSize: 12 }}>
+                  <span style={{ textTransform: 'capitalize' }}>{section}</span>
+                  <div style={{ display: 'flex', gap: 2 }}>
+                    <button className="btn btn-ghost" style={{ padding: '0 4px' }} disabled={idx === 0} onClick={() => moveSection(idx, 'up')}>↑</button>
+                    <button className="btn btn-ghost" style={{ padding: '0 4px' }} disabled={idx === selection.sectionOrder.length - 1} onClick={() => moveSection(idx, 'down')}>↓</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="sidebar-actions">
             <div className="nav-divider" />
             <button
@@ -262,6 +299,7 @@ function App() {
         <main className="main-content">
           <div className="editor-panel">
             {activeTab === 'personal' && <PersonalInfo />}
+            {activeTab === 'summary' && <SummarySection onEdit={(s) => openModal({ type: 'summary', mode: 'edit', data: s })} onAdd={() => openModal({ type: 'summary', mode: 'add' })} />}
             {activeTab === 'education' && <EducationSection />}
             {activeTab === 'experience' && <ExperienceSection onEdit={(exp) => openModal({ type: 'experience', mode: 'edit', data: exp })} onAdd={() => openModal({ type: 'experience', mode: 'add' })} />}
             {activeTab === 'activities' && <ActivitiesSection onEdit={(act) => openModal({ type: 'activity', mode: 'edit', data: act })} onAdd={() => openModal({ type: 'activity', mode: 'add' })} />}

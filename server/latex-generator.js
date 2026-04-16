@@ -106,6 +106,14 @@ function generateHeading(info) {
 `;
 }
 
+function generateSummary(summary) {
+  if (!summary) return '';
+  return `\\section{Professional Summary}
+  \\small ${lightEscape(summary.content)}
+  \\vspace{8pt}
+`;
+}
+
 function generateEducation(edu) {
   return `\\section{Education}
   \\resumeSubHeadingListStart
@@ -214,15 +222,23 @@ export function generateLatex(data, selection) {
     ? data.skills.find(s => s.id === selection.skillsId)
     : null;
 
+  // Find selected summary
+  const selectedSummary = selection.summaryId
+    ? data.summaries?.find(s => s.id === selection.summaryId)
+    : null;
+
   // Use custom personal info if provided
   const info = { ...personalInfo, ...(selection.personalInfo || {}) };
 
   // Build sections in order
-  const sectionOrder = selection.sectionOrder || ['education', 'experience', 'activities', 'projects', 'skills'];
+  const sectionOrder = selection.sectionOrder || ['summary', 'education', 'experience', 'activities', 'projects', 'skills'];
 
   let sections = '';
   for (const sec of sectionOrder) {
     switch (sec) {
+      case 'summary':
+        sections += generateSummary(selectedSummary);
+        break;
       case 'education':
         sections += generateEducation(education);
         break;

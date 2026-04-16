@@ -16,6 +16,18 @@
     "gpa": "3.6",
     "startYear": "2022"
   },
+  "summaries": [
+    {
+      "id": "summary-swe",
+      "variant": "Software Engineer",
+      "content": "Detail-oriented Software Engineer with expertise in building full-stack web applications, RESTful APIs, and scalable backend architectures. Proven ability to optimize application performance and deploy robust solutions using modern technologies such as React, Node.js, and SQL databases."
+    },
+    {
+      "id": "summary-hardware",
+      "variant": "Hardware / FPGA",
+      "content": "Hardware and Embedded Systems Engineer with hands-on experience in FPGA development, digital circuit design, and ASIC flow. Skilled in RTL design using Verilog/VHDL, and experienced in validating complex architectures including pipelined processors and cryptographic accelerators."
+    }
+  ],
   "experiences": [
     {
       "id": "exp-hardware",

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useApp, type ResumeItem } from '../App'
 
 interface ModalConfig {
-  type: 'project' | 'experience' | 'activity' | 'skill'
+  type: 'project' | 'experience' | 'activity' | 'skill' | 'summary'
   mode: 'add' | 'edit'
   data?: any
 }
@@ -65,6 +65,17 @@ export default function EditModal({ config, onClose }: Props) {
             onClose={onClose}
           />
         )}
+        {config.type === 'summary' && (
+          <SummaryForm
+            data={config.data}
+            isEdit={isEdit}
+            saving={saving}
+            setSaving={setSaving}
+            refreshData={refreshData}
+            addToast={addToast}
+            onClose={onClose}
+          />
+        )}
       </div>
     </div>
   )
@@ -89,6 +100,15 @@ function ItemsEditor({ items, setItems }: { items: ResumeItem[]; setItems: (item
     updated[idx] = { ...updated[idx], [field]: value }
     setItems(updated)
   }
+  const moveItem = (idx: number, direction: 'up' | 'down') => {
+    const newItems = [...items]
+    if (direction === 'up' && idx > 0) {
+      [newItems[idx - 1], newItems[idx]] = [newItems[idx], newItems[idx - 1]]
+    } else if (direction === 'down' && idx < newItems.length - 1) {
+      [newItems[idx + 1], newItems[idx]] = [newItems[idx], newItems[idx + 1]]
+    }
+    setItems(newItems)
+  }
 
   return (
     <div>
@@ -106,6 +126,8 @@ function ItemsEditor({ items, setItems }: { items: ResumeItem[]; setItems: (item
               onChange={e => updateItem(idx, 'title', e.target.value)}
               style={{ flex: '0 0 200px' }}
             />
+            <button className="btn btn-ghost btn-icon" style={{ marginLeft: 'auto' }} type="button" disabled={idx === 0} onClick={() => moveItem(idx, 'up')}>↑</button>
+            <button className="btn btn-ghost btn-icon" type="button" disabled={idx === items.length - 1} onClick={() => moveItem(idx, 'down')}>↓</button>
             <button className="btn btn-danger btn-icon" type="button" onClick={() => removeItem(idx)}>✕</button>
           </div>
           <textarea
@@ -377,6 +399,15 @@ function SkillForm({ data, isEdit, saving, setSaving, refreshData, addToast, onC
     updated[idx] = { ...updated[idx], [field]: value }
     setForm({ ...form, categories: updated })
   }
+  const moveCategory = (idx: number, direction: 'up' | 'down') => {
+    const newCat = [...form.categories]
+    if (direction === 'up' && idx > 0) {
+      [newCat[idx - 1], newCat[idx]] = [newCat[idx], newCat[idx - 1]]
+    } else if (direction === 'down' && idx < newCat.length - 1) {
+      [newCat[idx + 1], newCat[idx]] = [newCat[idx], newCat[idx + 1]]
+    }
+    setForm({ ...form, categories: newCat })
+  }
 
   const handleSave = async () => {
     setSaving(true)
@@ -436,6 +467,8 @@ function SkillForm({ data, isEdit, saving, setSaving, refreshData, addToast, onC
                 value={cat.label}
                 onChange={e => updateCategory(idx, 'label', e.target.value)}
               />
+              <button className="btn btn-ghost btn-icon" style={{ marginLeft: 'auto' }} type="button" disabled={idx === 0} onClick={() => moveCategory(idx, 'up')}>↑</button>
+              <button className="btn btn-ghost btn-icon" type="button" disabled={idx === form.categories.length - 1} onClick={() => moveCategory(idx, 'down')}>↓</button>
               <button className="btn btn-danger btn-icon" type="button" onClick={() => removeCategory(idx)}>✕</button>
             </div>
             <textarea
@@ -452,6 +485,70 @@ function SkillForm({ data, isEdit, saving, setSaving, refreshData, addToast, onC
         <button className="btn btn-ghost" onClick={onClose}>Cancel</button>
         <button className="btn btn-primary" onClick={handleSave} disabled={saving}>
           {saving ? 'Saving...' : isEdit ? 'Update' : 'Add Skill Set'}
+        </button>
+      </div>
+    </>
+  )
+}
+
+function SummaryForm({ data, isEdit, saving, setSaving, refreshData, addToast, onClose }: FormProps) {
+  const [form, setForm] = useState({
+    variant: data?.variant || '',
+    content: data?.content || ''
+  })
+
+  const handleSave = async () => {
+    setSaving(true)
+    try {
+      if (isEdit) {
+        await fetch(`/api/data/summaries/${data.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(form)
+        })
+      } else {
+        await fetch('/api/data/summaries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(form)
+        })
+      }
+      await refreshData()
+      addToast(`Summary ${isEdit ? 'updated' : 'added'}`, 'success')
+      onClose()
+    } catch {
+      addToast('Failed to save', 'error')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <>
+      <div className="modal-header">
+        <h3>{isEdit ? '✏️ Edit Summary' : '➕ Add Summary'}</h3>
+        <button className="btn btn-ghost btn-icon" onClick={onClose}>✕</button>
+      </div>
+      <div className="modal-body">
+        <div className="form-group">
+          <label className="form-label">Variant Name</label>
+          <input className="form-input" placeholder="e.g. Software Engineer, Hardware" value={form.variant} onChange={e => setForm({ ...form, variant: e.target.value })} />
+        </div>
+        <div className="form-group">
+          <label className="form-label">Summary Content</label>
+          <textarea
+            className="form-textarea"
+            placeholder="Write your professional summary here..."
+            value={form.content}
+            onChange={e => setForm({ ...form, content: e.target.value })}
+            rows={5}
+          />
+        </div>
+      </div>
+      <div className="modal-footer">
+        <button className="btn btn-ghost" onClick={onClose}>Cancel</button>
+        <button className="btn btn-primary" onClick={handleSave} disabled={saving}>
+          {saving ? 'Saving...' : isEdit ? 'Update' : 'Add Summary'}
         </button>
       </div>
     </>
