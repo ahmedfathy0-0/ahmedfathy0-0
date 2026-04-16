@@ -1,0 +1,413 @@
+{
+  "personalInfo": {
+    "name": "Ahmed Fathy",
+    "title": "Software Engineer",
+    "email": "ahmedfathi20044002@gmail.com",
+    "phone": "+20 155 285 1443",
+    "linkedin": "https://www.linkedin.com/in/ahmedfathy-x1",
+    "github": "https://github.com/ahmedfathy0-0",
+    "portfolio": "https://www.mrfathi.tech/",
+    "address": "Haram, Giza, Egypt 12556"
+  },
+  "education": {
+    "university": "Cairo University, Faculty of Engineering",
+    "location": "Giza, Egypt",
+    "degree": "B.Sc. in Computer Engineering",
+    "gpa": "3.6",
+    "startYear": "2022"
+  },
+  "experiences": [
+    {
+      "id": "exp-hardware",
+      "variant": "hardware",
+      "company": "Al Nada Scientific Office",
+      "location": "Cairo, Egypt",
+      "role": "Technical Support Trainee",
+      "dates": "June 2022 -- 2024",
+      "items": [
+        { "title": "Diagnostics & Maintenance", "description": "Troubleshot workstations and network equipment; performed firmware updates and preventive maintenance." },
+        { "title": "Documentation", "description": "Created systematic troubleshooting documentation to streamline hardware issue resolution." }
+      ]
+    },
+    {
+      "id": "exp-hardware-qa",
+      "variant": "hardware-qa",
+      "company": "Al Nada Scientific Office",
+      "location": "Giza, Egypt",
+      "role": "Technical Support Trainee",
+      "dates": "June 2022 -- 2024",
+      "items": [
+        { "title": "Root Cause Analysis", "description": "Investigated and isolated hardware faults using systematic debugging, performing firmware updates and maintenance." },
+        { "title": "Documentation", "description": "Created automated troubleshooting workflows to streamline issue resolution." }
+      ]
+    },
+    {
+      "id": "exp-software",
+      "variant": "software",
+      "company": "Al Nada Scientific Office",
+      "location": "Cairo, Egypt",
+      "role": "Software Developer (Part-time)",
+      "dates": "June 2022 -- 2024",
+      "items": [
+        { "title": "Full-Stack Development", "description": "Designed and built a custom ERP application using React.js, Express.js, and PostgreSQL to replace legacy spreadsheet-based workflows." },
+        { "title": "Web Development", "description": "Developed and enhanced company's official website using Next.js, optimized SEO for Google search rankings, and integrated ecommerce features for online product sales." },
+        { "title": "Desktop Deployment", "description": "Packaged the ERP application with Electron for local server deployment, enabling reliable offline operation." }
+      ]
+    },
+    {
+      "id": "exp-web",
+      "variant": "web",
+      "company": "Al Nada Scientific Office",
+      "location": "Cairo, Egypt",
+      "role": "Web Developer (Freelance)",
+      "dates": "June 2022 -- 2024",
+      "items": [
+        { "title": "Full-Stack Development", "description": "Built custom ERP web application using React.js and PostgreSQL to replace legacy spreadsheet-based business processes." },
+        { "title": "Frontend Engineering", "description": "Designed responsive user interface with Redux state management and RESTful API integration." },
+        { "title": "Deployment", "description": "Configured Electron-based desktop deployment for local server usage." }
+      ]
+    },
+    {
+      "id": "exp-ai",
+      "variant": "ai",
+      "company": "Al Nada Scientific Office",
+      "location": "Cairo, Egypt",
+      "role": "Software Developer (Freelance)",
+      "dates": "June 2022 -- 2024",
+      "items": [
+        { "title": "Database Design", "description": "Designed PostgreSQL database schema to structure customer, supplier, and inventory data for ERP application." },
+        { "title": "Data Analysis", "description": "Implemented reporting features to analyze sales trends and inventory status." }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "processor",
+      "name": "5-Stage Pipelined Processor (RISC)",
+      "url": "https://github.com/Exo1i/5-Stage-Pipelined-Processor.git",
+      "technologies": "VHDL, QuestaSim, Computer Architecture",
+      "year": "2025",
+      "category": "hardware",
+      "items": [
+        { "title": "Core Architecture", "description": "Engineered a 32-bit 5-stage pipelined processor in VHDL, supporting a custom ISA of over 25 instructions." },
+        { "title": "Hazard Resolution", "description": "Optimized throughput by implementing Hazard Detection and Data Forwarding units to resolve control and data dependencies." },
+        { "title": "Verification", "description": "Validated functional correctness through rigorous simulation and testbench environments in QuestaSim." }
+      ]
+    },
+    {
+      "id": "cnn",
+      "name": "CNN Convolution Accelerator",
+      "url": "https://github.com/AhmedSobhy01/convolution-accelerator.git",
+      "technologies": "Verilog, OpenLane2, ASIC Design",
+      "year": "2025",
+      "category": "hardware",
+      "items": [
+        { "title": "Architecture", "description": "Designed a synthesizable 2D convolution accelerator using Systolic Arrays and fully pipelined dataflow to maximize MAC throughput." },
+        { "title": "Memory Hierarchy", "description": "Implemented DMA-based loading and dual-port SRAM buffering to support up to 16x16 kernel execution." },
+        { "title": "Physical Design", "description": "Executed RTL-to-GDSII synthesis using OpenLane2, validating physical feasibility and achieving timing closure." }
+      ]
+    },
+    {
+      "id": "aes",
+      "name": "AES Encryption/Decryption Engine",
+      "url": "https://github.com/ahmedfathy0-0/AES.git",
+      "technologies": "Verilog, FPGA, Cryptography",
+      "year": "2023",
+      "category": "hardware",
+      "items": [
+        { "title": "Core Logic", "description": "Synthesized robust AES cryptographic core in Verilog HDL supporting 128-bit, 192-bit, and 256-bit key standards." },
+        { "title": "Datapath", "description": "Engineered hardware-optimized modules for SubBytes, ShiftRows, MixColumns, and AddRoundKey transformations." },
+        { "title": "Validation", "description": "Verified cryptographic correctness against standard NIST test vectors using rigorous debug tracing." }
+      ]
+    },
+    {
+      "id": "tactic",
+      "name": "Tactic (Robotics & AI)",
+      "url": "https://github.com/roboSobia",
+      "technologies": "Embedded Systems",
+      "year": "2024",
+      "category": "hardware",
+      "items": [
+        { "title": "System Integration", "description": "Developed browser-controlled robotics suite integrating AI computer vision with low-latency hardware control." },
+        { "title": "Firmware", "description": "Programmed ESP32 microcontrollers to handle WebSocket communication for real-time motor control and telemetry." },
+        { "title": "Backend Processing", "description": "Deployed YOLOv5 and OpenCV on host server to process visual feedback and automate robotic decision-making." }
+      ]
+    },
+    {
+      "id": "tactic-ibm",
+      "name": "Tactic (Robotics & AI)",
+      "url": "https://github.com/roboSobia",
+      "technologies": "Real-Time Systems, WebSockets, Embedded",
+      "year": "2024",
+      "category": "hardware",
+      "items": [
+        { "title": "Real-Time Messaging System", "description": "Engineered a low-latency WebSocket communication layer to integrate a web dashboard with embedded hardware." },
+        { "title": "Reliability", "description": "Ensured reliable message delivery and system synchronization between the browser interface and the robotic unit." }
+      ]
+    },
+    {
+      "id": "hankers",
+      "name": "Hankers (Social Platform)",
+      "url": "https://github.com/SWEProject25",
+      "technologies": "Full-Stack Engineering",
+      "year": "2025",
+      "category": "web",
+      "items": [
+        { "title": "Architecture", "description": "Built scalable social platform using Microservices principles, React.js, and TypeScript." },
+        { "title": "Frontend", "description": "Implemented responsive UI design and asynchronous API integration via AJAX." },
+        { "title": "DevOps", "description": "Established CI/CD pipelines and containerized services using Docker for consistent deployment." }
+      ]
+    },
+    {
+      "id": "hankers-ibm",
+      "name": "Hankers (Social Platform)",
+      "url": "https://github.com/SWEProject25",
+      "technologies": "Microservices, TypeScript, Docker, CI/CD",
+      "year": "2025",
+      "category": "web",
+      "items": [
+        { "title": "Scalable Microservices Architecture", "description": "Designed a distributed system using Microservices and TypeScript to decouple services and ensure scalability." },
+        { "title": "DevOps Automation", "description": "Implemented CI/CD pipelines and Docker to automate testing and reliable delivery of services." }
+      ]
+    },
+    {
+      "id": "nexamart",
+      "name": "NexaMart",
+      "url": "https://github.com/ahmedfathy0-0/NexaMart.git",
+      "technologies": "E-commerce Solution, Full-Stack",
+      "year": "2025",
+      "category": "web",
+      "items": [
+        { "title": "Stack", "description": "Next.js (TypeScript), Redux Toolkit, Laravel 11, and MySQL." },
+        { "title": "Functionality", "description": "Implemented secure authentication (Sanctum), shopping cart logic, real-time order processing, and administrative analytics dashboard." }
+      ]
+    },
+    {
+      "id": "tayseer",
+      "name": "Tayseer-Web",
+      "url": "https://github.com/ahmedfathy0-0/Tayseer-web.git",
+      "technologies": "Corporate Web Solution, Next.js",
+      "year": "2024",
+      "category": "web",
+      "items": [
+        { "title": "Deployment", "description": "Deployed corporate website utilizing Next.js framework and TypeScript." },
+        { "title": "Performance", "description": "Maximized performance via Server-Side Rendering (SSR) and strict static typing for reliability." }
+      ]
+    },
+    {
+      "id": "company-manager",
+      "name": "Company Manager App -- Al Nada Scientific Office",
+      "url": "https://github.com/Al-Nada-Company-Manager-App",
+      "technologies": "ERP System, React & PostgreSQL",
+      "year": "2024",
+      "category": "web",
+      "items": [
+        { "title": "Tech Stack", "description": "React.js, Redux, Express.js, Prisma, PostgreSQL, Electron for desktop deployment." },
+        { "title": "Business Solution", "description": "Developed ERP application for Al Nada Scientific Office managing customers, suppliers, inventory, and sales records." },
+        { "title": "Deployment", "description": "Packaged application with Electron for local server deployment, enabling offline usage." }
+      ]
+    },
+    {
+      "id": "blog",
+      "name": "Blog Web Application",
+      "url": "https://github.com/ahmedfathy0-0/Pharoh-s-StarCode",
+      "technologies": "Content Management System, Node.js",
+      "year": "2024",
+      "category": "web",
+      "items": [
+        { "title": "Core Features", "description": "Architected content platform with CRUD capabilities, rich-text editing (Quill), and secure image handling (Multer)." }
+      ]
+    },
+    {
+      "id": "orrery",
+      "name": "Interactive Orrery -- NASA Space Apps Hackathon",
+      "url": "https://github.com/ahmedfathy0-0/Pharoh-s-StarCode",
+      "technologies": "3D Space Simulation, React.js",
+      "year": "Oct 2024",
+      "category": "web",
+      "items": [
+        { "title": "Hackathon Project", "description": "Developed during NASA Space Apps Challenge 2024, simulating orbital mechanics and near-Earth object trajectories using React.js and Three.js." }
+      ]
+    },
+    {
+      "id": "image-colorization",
+      "name": "Image Restoration Pipeline",
+      "url": "https://github.com/ahmedfathy0-0/Image-Colorization-of-Historical-Photos",
+      "technologies": "Deep Learning & Computer Vision, Python",
+      "year": "2024",
+      "category": "ai",
+      "items": [
+        { "title": "Pipeline", "description": "Constructed end-to-end restoration pipeline: Denoising, Deblurring, and Inpainting." },
+        { "title": "Algorithms", "description": "Applied Telea (FMM) inpainting and deep learning models to restore damaged historical photographs." }
+      ]
+    },
+    {
+      "id": "path-planning",
+      "name": "Path Planning Analysis",
+      "url": "https://github.com/ahmedfathy0-0/Path-Planing-Analysis",
+      "technologies": "Algorithm Benchmarking, C++",
+      "year": "2024",
+      "category": "ai",
+      "items": [
+        { "title": "Performance", "description": "Benchmarked pathfinding algorithms (A*, Dijkstra, RRT) analyzing computational complexity and execution time." }
+      ]
+    },
+    {
+      "id": "brick-breakers",
+      "name": "x86 Brick Breakers Arcade",
+      "url": "https://github.com/ahmedfathy0-0/Brick-Breakers-Game-Assembly-8086.git",
+      "technologies": "Assembly (x86), MASM, Low-Level Programming",
+      "year": "2024",
+      "category": "games",
+      "items": [
+        { "title": "Game Logic", "description": "Developed a real-time, multiplayer arcade game using x86 Assembly and the MASM assembler." },
+        { "title": "System Control", "description": "Directly manipulated video memory for low-latency graphics rendering and managed hardware interrupts to handle real-time I/O." }
+      ]
+    },
+    {
+      "id": "alien-invasion",
+      "name": "Alien Invasion",
+      "url": "https://github.com/ahmedfathy0-0/alien-invasion",
+      "technologies": "Combat Simulation, C++",
+      "year": "2023",
+      "category": "games",
+      "items": [
+        { "title": "Simulation", "description": "Modeled combat scenarios using custom data structures to simulate fleet mechanics and collision detection." }
+      ]
+    },
+    {
+      "id": "paint",
+      "name": "Paint For Kids",
+      "url": "https://github.com/ahmedfathy0-0/paint-app",
+      "technologies": "C++, OOP, Data Structures",
+      "year": "2023",
+      "category": "games",
+      "items": [
+        { "title": "Application", "description": "Built desktop drawing application with shape tools, color fills, and interactive game modes." },
+        { "title": "Design", "description": "Applied OOP principles using polymorphism for extensible shape classes and Stack-based Undo/Redo system." }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-ieee",
+      "organization": "IEEE",
+      "location": "Cairo",
+      "role": "UI/UX Designer - Frontend Team Leader",
+      "dates": "Oct 2025 -- Present",
+      "items": [
+        { "title": "Portfolio Platform Development", "description": "Engineered comprehensive web platform featuring workshop and event management systems with admin dashboard for content creation, role-based access control enabling instructors to upload course materials and students to register for workshops and events." }
+      ]
+    },
+    {
+      "id": "act-tccd",
+      "organization": "Technical Center for Career Development (TCCD)",
+      "location": "Cairo",
+      "role": "Frontend Developer",
+      "dates": "June 2025 -- Present",
+      "items": [
+        { "title": "Portfolio Platform Development", "description": "Developed comprehensive platform with event pages, admin dashboard for event creation, role-based access for instructors and students, location management, event galleries, and statistical analysis pages." },
+        { "title": "HR Management & Judging System", "description": "Built HR system managing team attendance with custom form builder and reviewer functionality similar to Google Forms, alongside event judging system for evaluating and assessing teams applying to events." }
+      ]
+    },
+    {
+      "id": "act-phd",
+      "organization": "Physics Helping District (PhD)",
+      "location": "Cairo",
+      "role": "Team Leader",
+      "dates": "June 2022 -- 2024",
+      "items": [
+        { "title": "Mentorship", "description": "Led peer tutoring initiative in electronics, achieving measurable academic improvement." }
+      ]
+    },
+    {
+      "id": "act-nasa",
+      "organization": "NASA Space Apps Challenge",
+      "location": "Cairo",
+      "role": "Participant -- Project: \"Orrery\"",
+      "dates": "Oct 2024",
+      "items": [
+        { "title": "Orrery App", "description": "Developed an interactive orrery app visualizing near-Earth objects using React and Three.js." }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "skills-hardware",
+      "variant": "hardware",
+      "label": "Hardware & Embedded",
+      "categories": [
+        { "label": "Digital Design & Verification", "items": "Verilog HDL, VHDL, RTL Design, RISC-V ISA, MIPS Architecture, Pipeline Design, RTL-to-GDSII Flow, OpenLane2, DRC/LVS Verification, Static Timing Analysis, FSM Design" },
+        { "label": "Development Tools & Platforms", "items": "ModelSim, QuestaSim, Intel Quartus Prime, GTKWave, ESP32, AVR/Arduino" },
+        { "label": "Programming Languages", "items": "C/C++ (Advanced), Python, x86 Assembly, MIPS Assembly" }
+      ]
+    },
+    {
+      "id": "skills-software",
+      "variant": "software",
+      "label": "Software Engineering",
+      "categories": [
+        { "label": "Programming Languages", "items": "C++ Programming, Python, JavaScript, TypeScript, SQL, PHP, Java, Assembly Language" },
+        { "label": "Core Computing Concepts", "items": "Data Structures, Algorithms, Object-Oriented Programming, Design Patterns, Operating Systems, System Architecture" },
+        { "label": "Systems Programming", "items": "Unix/Linux Development, Multithreading, Memory Management, Network Socket Programming" },
+        { "label": "Backend Development & DevOps", "items": "Node.js Runtime, Express Framework, Laravel, RESTful APIs, Docker Containers, Git Version Control, CI/CD Pipelines" }
+      ]
+    },
+    {
+      "id": "skills-web",
+      "variant": "web",
+      "label": "Web Development",
+      "categories": [
+        { "label": "Frontend Development", "items": "React.js Framework, Next.js, TypeScript, Redux State Management, Tailwind CSS, Material-UI Components, Three.js Graphics" },
+        { "label": "Backend & Database Systems", "items": "Node.js Runtime, Express.js Framework, Laravel PHP, RESTful APIs, GraphQL, PostgreSQL, MySQL, MongoDB, Prisma ORM" },
+        { "label": "DevOps & Development Tools", "items": "Docker Containers, Git Version Control, CI/CD Automation, Linux Administration, API Testing, Cloud Deployment" }
+      ]
+    },
+    {
+      "id": "skills-web-ibm",
+      "variant": "web-ibm",
+      "label": "Web (IBM Tailored)",
+      "categories": [
+        { "label": "Core Concepts", "items": "OOP, SOLID Principles, Design Patterns (Factory, Strategy, Singleton), Microservices Architecture, Clean Code" },
+        { "label": "Integration & Backend", "items": "RESTful APIs, GraphQL, WebSockets (Messaging), JSON/XML Data Mapping" },
+        { "label": "DevOps & Tools", "items": "CI/CD Pipelines, Docker, Git, Linux (Fedora)" },
+        { "label": "Languages & DBs", "items": "TypeScript, Python, SQL (PostgreSQL/MySQL), Node.js" }
+      ]
+    },
+    {
+      "id": "skills-ai",
+      "variant": "ai",
+      "label": "AI & Machine Learning",
+      "categories": [
+        { "label": "AI & Machine Learning", "items": "Deep Learning, Computer Vision, CNNs, YOLO, Image Processing, Inpainting" },
+        { "label": "Data Science Libraries", "items": "NumPy, Pandas, SciPy, Matplotlib, Scikit-learn, OpenCV, Pillow" },
+        { "label": "Frameworks", "items": "PyTorch, TensorFlow, Keras" },
+        { "label": "Languages & Tools", "items": "Python (Advanced), C++, SQL, Git/GitHub, Jupyter Notebooks" },
+        { "label": "Deployment", "items": "FastAPI, Flask, Docker, React.js (Frontend Integration)" }
+      ]
+    },
+    {
+      "id": "skills-siemens",
+      "variant": "siemens",
+      "label": "Siemens / EDA",
+      "categories": [
+        { "label": "Languages", "items": "Python (Advanced), Bash/Shell Scripting, C++, JavaScript/TypeScript, Verilog/VHDL" },
+        { "label": "Automation & DevOps", "items": "Linux (Fedora/RedHat), Docker, CI/CD Pipelines, Git, Make/CMake" },
+        { "label": "Web & Frameworks", "items": "React.js, Node.js, REST APIs" },
+        { "label": "Domain Knowledge", "items": "VLSI Design Flow, ASIC Verification, DRC/LVS Concepts, Static Timing Analysis" }
+      ]
+    },
+    {
+      "id": "skills-master",
+      "variant": "master",
+      "label": "Master (All Skills)",
+      "categories": [
+        { "label": "Programming Languages", "items": "TypeScript, JavaScript, Python, C++, PHP, SQL, VHDL, Verilog" },
+        { "label": "Frontend Engineering", "items": "React.js, Next.js, Redux Toolkit, Tailwind CSS, Material-UI, Three.js" },
+        { "label": "Backend & Database", "items": "Node.js, Express.js, Laravel, FastAPI, PostgreSQL, MySQL, MongoDB, Prisma ORM" },
+        { "label": "AI & Computer Vision", "items": "OpenCV, YOLOv5, NumPy, Pandas, Scikit-learn, PyTorch" },
+        { "label": "DevOps & Tools", "items": "Docker, Git/GitHub, CI/CD Pipelines, Linux (Bash), Postman, Agile/Scrum" }
+      ]
+    }
+  ]
+}
