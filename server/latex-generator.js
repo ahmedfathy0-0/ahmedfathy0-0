@@ -25,7 +25,24 @@ function lightEscape(text) {
     .replace(/%(?!\\)/g, '\\%');
 }
 
-function generatePreamble() {
+function generatePreamble(compact = false) {
+  const sideMarginAdjust = compact ? '-0.62in' : '-0.5in';
+  const textWidthAdjust = compact ? '1.24in' : '1.0in';
+  const topMarginAdjust = compact ? '-0.82in' : '-.7in';
+  const textHeightAdjust = compact ? '1.75in' : '1.4in';
+  const lineSpread = compact ? '\\linespread{0.95}\\selectfont' : '\\linespread{0.97}\\selectfont';
+  const sectionTitleVSpace = compact ? '-12pt' : '-10pt';
+  const sectionRuleVSpace = compact ? '-7pt' : '-5pt';
+  const resumeItemVSpace = compact ? '-3pt' : '-2pt';
+  const subheadingVSpace = compact ? '-6pt' : '-5pt';
+  const listSubheadingVSpace = compact ? '-5pt' : '-13pt';
+  const listEndVSpace = compact ? '-8pt' : '-3pt';
+  const subsectionListGap = compact ? '0.3pt' : '0.3pt';
+  const itemListItemSep = compact ? '0.7pt' : '1.2pt';
+  const itemizeConfig = compact
+    ? '\\setlist[itemize]{leftmargin=*,topsep=1pt,itemsep=1pt,parsep=0pt,partopsep=0pt}'
+    : '\\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=2pt,parsep=0pt,partopsep=0pt}';
+
   return `\\documentclass[letterpaper,11pt]{article}
 
 \\usepackage{latexsym}
@@ -44,51 +61,53 @@ function generatePreamble() {
 \\renewcommand{\\headrulewidth}{0pt}
 \\renewcommand{\\footrulewidth}{0pt}
 
-\\addtolength{\\oddsidemargin}{-0.5in}
-\\addtolength{\\evensidemargin}{-0.5in}
-\\addtolength{\\textwidth}{1.0in}
-\\addtolength{\\topmargin}{-.7in}
-\\addtolength{\\textheight}{1.4in}
+\\addtolength{\\oddsidemargin}{${sideMarginAdjust}}
+\\addtolength{\\evensidemargin}{${sideMarginAdjust}}
+\\addtolength{\\textwidth}{${textWidthAdjust}}
+\\addtolength{\\topmargin}{${topMarginAdjust}}
+\\addtolength{\\textheight}{${textHeightAdjust}}
 
 \\urlstyle{same}
 \\raggedbottom
 \\raggedright
 \\setlength{\\tabcolsep}{0in}
+${lineSpread}
+${itemizeConfig}
 
 \\titleformat{\\section}{
-  \\vspace{-8pt}\\scshape\\raggedright\\large
-}{}{0em}{}[\\color{black}\\titlerule \\vspace{-4pt}]
+  \\vspace{${sectionTitleVSpace}}\\scshape\\raggedright\\large
+}{}{0em}{}[\\color{black}\\titlerule \\vspace{${sectionRuleVSpace}}]
 
-\\newcommand{\\resumeItem}[2]{\\item\\small{\\textbf{#1}{: #2 \\vspace{-2pt}}}}
+\\newcommand{\\resumeItem}[2]{\\item\\small{\\textbf{#1}{: #2 \\vspace{${resumeItemVSpace}}}}}
 
 \\newcommand{\\resumeSubheading}[4]{
   \\vspace{-1pt}\\item
     \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
       \\textbf{#1} & #2 \\\\
       \\textit{\\small#3} & \\textit{\\small #4} \\\\
-    \\end{tabular*}\\vspace{-5pt}
+    \\end{tabular*}\\vspace{${subheadingVSpace}}
 }
 
-\\newcommand{\\resumeProjectSubheading}[4]{
+\\newcommand{\\resumeProjectSubheading}[3]{
   \\vspace{-1pt}\\item
     \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
-      \\textbf{#1} $|$ \\textit{\\small#3} & \\href{#2}{Source Code} $|$ \\textit{\\small #4} \\\\
-    \\end{tabular*}\\vspace{-5pt}
+      \\textbf{#1} $|$ \\textit{\\small#2} & #3 \\\\
+    \\end{tabular*}\\vspace{${listSubheadingVSpace}}
 }
 
 \\newcommand{\\resumeActivitySubheading}[4]{
   \\vspace{-1pt}\\item
     \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
       \\textbf{#1} $|$ \\textit{\\small#3} & \\textit{\\small#2} $|$ \\textit{\\small #4} \\\\
-    \\end{tabular*}\\vspace{-5pt}
+    \\end{tabular*}\\vspace{${listSubheadingVSpace}}
 }
 
 \\newcommand{\\resumeSubItem}[2]{\\resumeItem{#1}{#2}\\vspace{-4pt}}
 \\renewcommand{\\labelitemii}{$\\circ$}
 \\newcommand{\\resumeSubHeadingListStart}{\\begin{itemize}[leftmargin=*]}
 \\newcommand{\\resumeSubHeadingListEnd}{\\end{itemize}}
-\\newcommand{\\resumeItemListStart}{\\begin{itemize}}
-\\newcommand{\\resumeItemListEnd}{\\end{itemize}\\vspace{-5pt}}
+\\newcommand{\\resumeItemListStart}{\\vspace*{${subsectionListGap}}\\begin{itemize}[leftmargin=*,topsep=0pt,itemsep=${itemListItemSep},parsep=0pt,partopsep=0pt]}
+\\newcommand{\\resumeItemListEnd}{\\end{itemize}\\vspace{${listEndVSpace}}}
 `;
 }
 
@@ -108,19 +127,24 @@ function generateHeading(info) {
 
 function generateSummary(summary) {
   if (!summary) return '';
-  return `\\section{Professional Summary}
-  \\small ${lightEscape(summary.content)}
-  \\vspace{8pt}
+  return `\section{Professional Summary}
+  \small ${lightEscape(summary.content)}
+  \\vspace{2pt}
 `;
 }
 
 function generateEducation(edu) {
+  const educationYears = edu.endYear
+    ? `${lightEscape(edu.startYear)} -- ${lightEscape(edu.endYear)}`
+    : lightEscape(edu.startYear);
+
   return `\\section{Education}
   \\resumeSubHeadingListStart
     \\resumeSubheading
       {${lightEscape(edu.university)}}{${lightEscape(edu.location)}}
-      {${lightEscape(edu.degree)};  GPA: ${edu.gpa}}{${edu.startYear}}
+      {${lightEscape(edu.degree)};  GPA: ${edu.gpa}}{${educationYears}}
   \\resumeSubHeadingListEnd
+  \\vspace{-2pt}
 `;
 }
 
@@ -138,19 +162,36 @@ function generateExperience(exp) {
 ${items}
       \\resumeItemListEnd
   \\resumeSubHeadingListEnd
+  \\vspace{-2pt}
 `;
 }
 
 function generateProjects(projects, sectionTitle = 'Projects') {
   if (!projects || projects.length === 0) return '';
 
+  const getPrimaryProjectUrl = (project) => {
+    const sourceCodeUrl = (project?.sourceCodeUrl || '').trim();
+    if (sourceCodeUrl) return sourceCodeUrl;
+
+    const previewUrl = (project?.previewUrl || '').trim();
+    if (previewUrl) return previewUrl;
+
+    const legacyUrl = (project?.url || '').trim();
+    return legacyUrl || '';
+  };
+
   let entries = projects.map(p => {
     let items = p.items.map(i =>
       `        \\resumeItem{${lightEscape(i.title)}}\n          {${lightEscape(i.description)}}`
     ).join('\n');
 
+    const primaryUrl = getPrimaryProjectUrl(p);
+    const titlePart = primaryUrl
+      ? `\\href{${primaryUrl}}{\\textbf{${lightEscape(p.name)}}}`
+      : `\\textbf{${lightEscape(p.name)}}`;
+
     return `    \\resumeProjectSubheading
-      {${lightEscape(p.name)}}{${p.url}}{${lightEscape(p.technologies)}}{${p.year}}
+      {${titlePart}}{${lightEscape(p.technologies)}}{\\textit{\\small ${lightEscape(p.year || '')}}}
       \\resumeItemListStart
 ${items}
       \\resumeItemListEnd`;
@@ -160,6 +201,7 @@ ${items}
   \\resumeSubHeadingListStart
 ${entries}
   \\resumeSubHeadingListEnd
+  \\vspace{-2pt}
 `;
 }
 
@@ -182,6 +224,7 @@ ${items}
   \\resumeSubHeadingListStart
 ${entries}
   \\resumeSubHeadingListEnd
+  \\vspace{-2pt}
 `;
 }
 
@@ -196,6 +239,7 @@ function generateSkills(skills) {
  \\resumeSubHeadingListStart
 ${items}
  \\resumeSubHeadingListEnd
+ \\vspace{-2pt}
 `;
 }
 
@@ -257,7 +301,7 @@ export function generateLatex(data, selection) {
     }
   }
 
-  return `${generatePreamble()}
+  return `${generatePreamble(Boolean(selection.compactPdf))}
 \\begin{document}
 
 ${generateHeading(info)}

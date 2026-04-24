@@ -149,9 +149,14 @@ function ItemsEditor({ items, setItems }: { items: ResumeItem[]; setItems: (item
 }
 
 function ProjectForm({ data, isEdit, saving, setSaving, refreshData, addToast, onClose }: FormProps) {
+  const legacyUrl = (data?.url || '').trim()
+  const isLegacyGithub = /github\.com/i.test(legacyUrl)
+  const inferredLegacyType = data?.linkType || (isLegacyGithub ? 'source' : 'preview')
+
   const [form, setForm] = useState({
     name: data?.name || '',
-    url: data?.url || '',
+    previewUrl: data?.previewUrl ?? (legacyUrl && inferredLegacyType === 'preview' ? legacyUrl : ''),
+    sourceCodeUrl: data?.sourceCodeUrl ?? (legacyUrl && inferredLegacyType === 'source' ? legacyUrl : ''),
     technologies: data?.technologies || '',
     year: data?.year || new Date().getFullYear().toString(),
     category: data?.category || 'web',
@@ -161,17 +166,25 @@ function ProjectForm({ data, isEdit, saving, setSaving, refreshData, addToast, o
   const handleSave = async () => {
     setSaving(true)
     try {
+      const previewUrl = form.previewUrl.trim()
+      const sourceCodeUrl = form.sourceCodeUrl.trim()
+      const payload = {
+        ...form,
+        previewUrl: previewUrl || null,
+        sourceCodeUrl: sourceCodeUrl || null,
+      }
+
       if (isEdit) {
         await fetch(`/api/data/projects/${data.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(form)
+          body: JSON.stringify(payload)
         })
       } else {
         await fetch('/api/data/projects', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(form)
+          body: JSON.stringify(payload)
         })
       }
       await refreshData()
@@ -202,8 +215,22 @@ function ProjectForm({ data, isEdit, saving, setSaving, refreshData, addToast, o
           </div>
         </div>
         <div className="form-group">
-          <label className="form-label">URL</label>
-          <input className="form-input" value={form.url} onChange={e => setForm({ ...form, url: e.target.value })} />
+          <label className="form-label">Live Preview URL</label>
+          <input
+            className="form-input"
+            value={form.previewUrl}
+            placeholder="https://your-live-app.com"
+            onChange={e => setForm({ ...form, previewUrl: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label">Source Code URL</label>
+          <input
+            className="form-input"
+            value={form.sourceCodeUrl}
+            placeholder="https://github.com/user/repo"
+            onChange={e => setForm({ ...form, sourceCodeUrl: e.target.value })}
+          />
         </div>
         <div className="form-row">
           <div className="form-group">

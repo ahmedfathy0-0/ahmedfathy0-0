@@ -28,6 +28,7 @@ export default function EducationSection() {
   }
 
   const edu = data.education
+  const educationYears = edu.endYear ? `${edu.startYear} -- ${edu.endYear}` : edu.startYear
 
   return (
     <div>
@@ -55,7 +56,7 @@ export default function EducationSection() {
               <div className="card-subtitle">{edu.degree} — GPA: {edu.gpa}</div>
               <div className="card-meta">
                 <span className="meta-tag">📍 {edu.location}</span>
-                <span className="meta-tag">📅 {edu.startYear}</span>
+                <span className="meta-tag">📅 {educationYears}</span>
               </div>
             </div>
           </div>
@@ -74,6 +75,10 @@ export default function EducationSection() {
             <div className="form-group">
               <label className="form-label">Start Year</label>
               <input className="form-input" value={form.startYear} onChange={e => setForm({ ...form, startYear: e.target.value })} />
+            </div>
+            <div className="form-group">
+              <label className="form-label">End Year</label>
+              <input className="form-input" value={form.endYear || ''} onChange={e => setForm({ ...form, endYear: e.target.value })} placeholder="e.g. 2027" />
             </div>
             <div className="form-group full-width">
               <label className="form-label">Degree</label>

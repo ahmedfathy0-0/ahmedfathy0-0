@@ -19,7 +19,10 @@ export interface ResumeItem {
 export interface Project {
   id: string
   name: string
-  url: string
+  url?: string
+  linkType?: 'source' | 'preview'
+  previewUrl?: string | null
+  sourceCodeUrl?: string | null
   technologies: string
   year: string
   category: string
@@ -80,6 +83,7 @@ export interface Education {
   degree: string
   gpa: string
   startYear: string
+  endYear?: string
 }
 
 export interface ResumeData {
@@ -100,6 +104,7 @@ export interface Selection {
   skillsId: string | null
   sectionOrder: string[]
   projectsSectionTitle: string
+  compactPdf: boolean
 }
 
 // Context
@@ -125,6 +130,8 @@ type ModalConfig = {
 } | null
 
 function App() {
+  const allSections = ['summary', 'education', 'experience', 'projects', 'activities', 'skills']
+
   const [data, setData] = useState<ResumeData | null>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('personal')
@@ -134,8 +141,9 @@ function App() {
     projectIds: [],
     activityIds: [],
     skillsId: null,
-    sectionOrder: ['summary', 'education', 'experience', 'projects', 'activities', 'skills'],
-    projectsSectionTitle: 'Projects'
+    sectionOrder: [...allSections],
+    projectsSectionTitle: 'Projects',
+    compactPdf: false
   })
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
   const [compiling, setCompiling] = useState(false)
@@ -228,6 +236,25 @@ function App() {
     setSelection({ ...selection, sectionOrder: newOrder })
   }
 
+  const hideSection = (section: string) => {
+    setSelection(prev => ({
+      ...prev,
+      sectionOrder: prev.sectionOrder.filter(s => s !== section)
+    }))
+  }
+
+  const showSection = (section: string) => {
+    setSelection(prev => {
+      if (prev.sectionOrder.includes(section)) return prev
+      return {
+        ...prev,
+        sectionOrder: [...prev.sectionOrder, section]
+      }
+    })
+  }
+
+  const hiddenSections = allSections.filter(s => !selection.sectionOrder.includes(s))
+
   if (loading) {
     return (
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
@@ -268,9 +295,35 @@ function App() {
                   <div style={{ display: 'flex', gap: 2 }}>
                     <button className="btn btn-ghost" style={{ padding: '0 4px' }} disabled={idx === 0} onClick={() => moveSection(idx, 'up')}>↑</button>
                     <button className="btn btn-ghost" style={{ padding: '0 4px' }} disabled={idx === selection.sectionOrder.length - 1} onClick={() => moveSection(idx, 'down')}>↓</button>
+                    <button className="btn btn-ghost" style={{ padding: '0 4px' }} onClick={() => hideSection(section)} title="Hide section">✕</button>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {hiddenSections.length > 0 && (
+              <div style={{ marginTop: 10 }}>
+                <h3 style={{ fontSize: 11, textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 6, letterSpacing: '0.5px' }}>Hidden Sections</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  {hiddenSections.map(section => (
+                    <div key={section} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 8px', background: 'var(--bg-glass)', borderRadius: 'var(--radius-sm)', fontSize: 12 }}>
+                      <span style={{ textTransform: 'capitalize' }}>{section}</span>
+                      <button className="btn btn-ghost" style={{ padding: '0 4px' }} onClick={() => showSection(section)} title="Show section">＋</button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div style={{ marginTop: 10 }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: 'var(--text-secondary)' }}>
+                <input
+                  type="checkbox"
+                  checked={selection.compactPdf}
+                  onChange={e => setSelection(prev => ({ ...prev, compactPdf: e.target.checked }))}
+                />
+                Compact PDF layout (fit one page)
+              </label>
             </div>
           </div>
 
