@@ -34,3 +34,4 @@ dist-ssr
 *.tmp
 server/temp/
 server/output/
+cv-builder/
